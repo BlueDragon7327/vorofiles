@@ -1,0 +1,17 @@
+local function createNotification()
+    local player = game.Players.LocalPlayer
+    local success, errorMessage = pcall(function()
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Voro",
+            Text = "Voro Lite Successfully Injected",
+            Duration = 5 
+        })
+    end)
+
+    if not success then
+        warn("Error sending notification: " .. errorMessage)
+    end
+end
+
+
+createNotification()
